@@ -1,15 +1,31 @@
 <template>
-  <li>{{ book.title}}: {{ book.author }}</li>
+
 </template>
 
 <script>
 export default {
   name: 'BookItem',
-  props: ['book']
+  data() {
+    return {
+      title: 'All Books',
+      books: [
+        { title: 'Self-Reliance', author: 'Ralph Waldo Emerson'},
+        { title: 'American Gods', author: 'Neil Gaiman'},
+        { title: 'Amusing Ourselves to Death', author: 'Neil Postman'},
+      ]
+      }
+    }
 }
 </script>
 
 <style>
+h1, h2 {
+  font-weight: normal
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
 li {
   display: block;
   margin: 0 10px;
